@@ -12,7 +12,8 @@ ENV/
 
 # Dataset & Preprocessed Data
 Balanced Accident Video Dataset/
-preprocessed/
+# preprocessed/  # Allow pushing preprocessed data
+preprocessed/*.pt
 *.mp4
 *.avi
 *.mov
