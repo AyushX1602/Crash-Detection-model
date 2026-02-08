@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Dataset & Preprocessed Data
+Balanced Accident Video Dataset/
+preprocessed/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large files (optional - keep model for now)
+# *.pth
+# *.pkl
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+temp/
+tmp/
