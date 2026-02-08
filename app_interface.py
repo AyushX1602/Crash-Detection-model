@@ -17,7 +17,7 @@ from pathlib import Path
 SEQUENCE_LENGTH = 16
 IMG_SIZE = 224
 MODEL_PATH = 'best_video_crash_model.pth'
-LABEL_ENCODER_PATH = 'preprocessed/label_encoder.pkl'
+LABEL_ENCODER_PATH = 'label_encoder.pkl'
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -205,8 +205,8 @@ with gr.Blocks(title="🚗 Crash Detection AI", theme=gr.themes.Soft()) as demo:
     Upload a video to detect crash severity using AI
     
     **Model Info:**
-    - Accuracy: 61.33% (Test)
-    - Classes: Major, Minor, Moderate
+    - Accuracy: 77.55% (Test)
+    - Classes: Major, Minor, Moderate, **No Crash**
     - Frames analyzed: 16 per video
     """)
     
@@ -255,9 +255,10 @@ with gr.Blocks(title="🚗 Crash Detection AI", theme=gr.themes.Soft()) as demo:
     ---
     **Model Details:**
     - Architecture: MobileNetV2 + BiLSTM + Attention
-    - Training: 1050 videos, 3 crash classes
-    - Performance: 61% test accuracy, 63% validation
+    - Training: 2,279 videos, 4 classes (major/minor/moderate/no_crash)
+    - Performance: 77.55% test accuracy, 77.42% validation
     - GPU: Optimized for NVIDIA RTX 4050
+    - **No Crash Detection:** 99% precision, 100% recall (Perfect!)
     """)
 
 
