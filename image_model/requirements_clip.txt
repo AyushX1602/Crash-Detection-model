@@ -1,0 +1,23 @@
+# CLIP Crash Detection System - Dependencies
+
+# Core ML/DL libraries
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Hugging Face Transformers (for CLIP)
+transformers>=4.30.0
+
+# Image processing
+pillow>=10.0.0
+
+# API Framework (optional - only if using api_clip.py)
+fastapi>=0.100.0
+uvicorn>=0.23.0
+python-multipart>=0.0.6
+
+# Progress bars
+tqdm>=4.65.0
+
+# Additional utilities
+numpy>=1.24.0
+requests>=2.31.0

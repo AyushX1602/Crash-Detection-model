@@ -1,26 +1,19 @@
-# Python
+# Crash Detection Model - .gitignore
+
+# Python cache
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
+*.egg-info/
+dist/
+build/
 
-# Virtual Environment
+# Virtual environments
 venv/
 env/
 ENV/
-
-# Dataset & Preprocessed Data
-Balanced Accident Video Dataset/
-# preprocessed/  # Allow pushing preprocessed data
-preprocessed/*.pt
-*.mp4
-*.avi
-*.mov
-*.mkv
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # IDE
 .vscode/
@@ -28,18 +21,42 @@ preprocessed/*.pt
 *.swp
 *.swo
 
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights (auto-download from Hugging Face on first run)
+# Excluded due to GitHub 100MB file size limit
+image_model/clip_model/*.bin
+image_model/clip_model/*.safetensors
+
+# Training artifacts (not needed for deployment)
+*.pth
+*.h5
+*.ckpt
+preprocessed/
+checkpoints/
+
+# Dataset folders (too large, download on setup)
+image_model/datasets/
+image_model/classification_dataset/
+
+# Video datasets and files (too large for Git)
+Balanced Accident Video Dataset/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+
+# Logs
+*.log
+logs/
+
 # OS
 .DS_Store
 Thumbs.db
 
-# Large files (optional - keep model for now)
-# *.pth
-# *.pkl
-
-# Logs
-*.log
-
 # Temporary files
 *.tmp
-temp/
-tmp/
+*.bak
